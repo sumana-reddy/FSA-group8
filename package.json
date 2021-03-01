@@ -1,8 +1,8 @@
 {
-  "name": "package",
+  "name": "fsa-group8",
   "version": "1.0.0",
-  "description": "a full stack application",
-  "main": "index.js",
+  "description": "app about locations of treasure",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/sumana-reddy/FSA-group8.git"
   },
-  "author": "sumana",
+  "author": "Sri Sudheera and Sumana",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sumana-reddy/FSA-group8/issues"
   },
-  "homepage": "https://github.com/sumana-reddy/FSA-group8#readme"
+  "homepage": "https://github.com/sumana-reddy/FSA-group8#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
