@@ -2,6 +2,7 @@
 A full stack app
 
 # Link to hosted app
+https://sumana-reddy.github.io/FSA-group8/
 
 <table>
   <tr>
@@ -23,7 +24,7 @@ PostgreSQL is a powerful, open source object-relational database management syst
 ### Express (Back-End Framework) 
 It is a web application framework for Node.js. Being a free and open software, it is used for building web applications and specially APIs.
 
-### React (Front-End Library) 
+### React (Front-End Library)
 React is basically a JavaScript library for building user interfaces. It is easy, efficient and painless way to create Interactive UIs. It is maintained by Facebook and a community of individual developers and companies. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes and for this reason only, it is used for developing single-page application or mobile applications. 
 
 ### Node.js (JavaScript runtime environment) 
