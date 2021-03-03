@@ -37,3 +37,6 @@ This stack consists of PostgreSQL, Express, React and Node.js.
 
 ### Node.js (JavaScript runtime environment) 
 * Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine for developing server-side and networking applications. Being an asynchronous event-driven JavaScript runtime, it is used to build fast and scalable network applications. Node.js is free and open source server environment that runs on many platforms. 
+
+## Kanban Project Board
+[Kanban](https://github.com/sumana-reddy/FSA-group8/projects/1)
