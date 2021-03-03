@@ -19,7 +19,7 @@ https://sumana-reddy.github.io/FSA-group8/
     </tr>
  </table>
 
-# Stack
+# Stack 📜
 <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200402205611/What-is-PERN-Stack.png" align="right"
      alt="Size Limit logo by Anton Lovchikov" width="250" height="120">
 This stack consists of PostgreSQL, Express, React and Node.js.
@@ -38,5 +38,5 @@ This stack consists of PostgreSQL, Express, React and Node.js.
 ### Node.js (JavaScript runtime environment) 
 * Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine for developing server-side and networking applications. Being an asynchronous event-driven JavaScript runtime, it is used to build fast and scalable network applications. Node.js is free and open source server environment that runs on many platforms. 
 
-## Kanban Project Board
+## Kanban Project Board 📋
 [Kanban](https://github.com/sumana-reddy/FSA-group8/projects/1)
