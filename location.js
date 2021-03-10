@@ -18,7 +18,7 @@ export default [
             {
                 latitude: 40.360521,
                 longitude: -94.888210
-            }
+            }            
         ]
     },
     
@@ -35,6 +35,20 @@ export default [
                 Latitude: 35.8429, 
                 Longitude: -78.853732
             },
+            
+            {
+                Latitude: 35.8280, 
+                Longitude: -78.855489                
+            },
+            
+            {
+                Latitude: 35.8216, 
+                Longitude: -78.858790
+            }
+            
+          ]
+    },
+            
             
             
     
