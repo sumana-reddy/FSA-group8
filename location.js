@@ -23,6 +23,22 @@ export default [
     },
     
     {
+        name: '5860 McCrimmon Parkway',
+        type: 'quad',
+        coordinates: [
+            {
+                Latitude: 35.8416, 
+                Longitude: -78.852915
+            },
+            
+            {
+                Latitude: 35.8429, 
+                Longitude: -78.853732
+            },
+            
+            
+    
+    {
         Name:'B.D Owens Library',
         Latitude:40.35385, 
         Longitude:-94.88591,
