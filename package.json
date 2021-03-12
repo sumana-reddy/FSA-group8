@@ -1,24 +1,10 @@
 {
-  "name": "fsa-group8",
-  "version": "1.0.0",
-  "description": "app about locations of treasure",
-  "main": "app.js",
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "devstart": "nodemon ./bin/www",
-    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sumana-reddy/FSA-group8.git"
-  },
-  "author": "Sri Sudheera and Sumana",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sumana-reddy/FSA-group8/issues"
-  },
-  "homepage": "https://github.com/sumana-reddy/FSA-group8#readme",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -26,8 +12,5 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
   }
 }
