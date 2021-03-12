@@ -20,26 +20,23 @@ https://sumana-reddy.github.io/FSA-group8/
  </table>
 
 # Stack 📜
-<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200402205611/What-is-PERN-Stack.png" align="right"
+<img src="https://miro.medium.com/max/645/1*fhdapW2BhpMApkqY78pI5w.jpeg" align="right"
      alt="Size Limit logo by Anton Lovchikov" width="250" height="120">
-This stack consists of PostgreSQL, Express, React and Node.js.
+This stack consists of PostgreSQL, Express,Sequelize and Node.js.
 
-## Knowing about PERN Stack Components:
+## Knowing about Stack Components:
  
 ### PostgreSQL (Object-Relational Database)
 * PostgreSQL is a powerful, open source object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
 
-### Express (Back-End Framework) 
+### Express with ejs (Back-End Framework) 
 * It is a web application framework for Node.js. Being a free and open software, it is used for building web applications and specially APIs.
-
-### React (Front-End Library)
-* React is basically a JavaScript library for building user interfaces. It is easy, efficient and painless way to create Interactive UIs. It is maintained by Facebook and a community of individual developers and companies. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes and for this reason only, it is used for developing single-page application or mobile applications. 
 
 ### Node.js (JavaScript runtime environment) 
 * Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine for developing server-side and networking applications. Being an asynchronous event-driven JavaScript runtime, it is used to build fast and scalable network applications. Node.js is free and open source server environment that runs on many platforms. 
 
-## Pern Stack reference
-* [Pern Stack](https://www.geeksforgeeks.org/what-is-pern-stack/)
+## Stack reference
+* [Stack](https://github.com/denisecase/web-app-2020-fall)
 
 ## Kanban Project Board 📋
 [Kanban](https://github.com/sumana-reddy/FSA-group8/projects/1)
