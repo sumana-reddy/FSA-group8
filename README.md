@@ -18,7 +18,8 @@ https://sumana-reddy.github.io/FSA-group8/
 
 ## FAQ's
 ### what location shape are you using? 
-Quad
+- **Quad**
+
 ### what is the source for your location logic?
 https://github.com/sumana-reddy/talk-2-treasure-8/blob/main/scripts/location-quad.js - Author: [Sri Sudheera](https://github.com/sudheera96)
 
