@@ -42,6 +42,7 @@ This stack consists of PostgreSQL, Express,Sequelize and Node.js.
 ### Host Heroku
 
 ## Stack reference
+* [Stack](https://github.com/denisecase/web-app-2020-fall)
 * [Nodejs](https://www.w3schools.com/nodejs/)
 * [Express](https://www.tutorialspoint.com/expressjs/expressjs_overview.htm)
 * [Sequelize](https://sequelize.org/master/manual/getting-started.html)
