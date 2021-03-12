@@ -43,6 +43,8 @@ This stack consists of PostgreSQL, Express,Sequelize and Node.js.
 
 ## Stack reference
 * [Nodejs](https://www.w3schools.com/nodejs/)
+* [Express](https://www.tutorialspoint.com/expressjs/expressjs_overview.htm)
+* [Sequelize](https://sequelize.org/master/manual/getting-started.html)
 
 ## Kanban Project Board 📋
 [Kanban](https://github.com/sumana-reddy/FSA-group8/projects/1)
