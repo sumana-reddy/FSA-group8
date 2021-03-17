@@ -4,26 +4,27 @@
 
 <head>
     <%- include('../views/partials/head.ejs'); %>
+    <script type="module" src="/javascripts/main.js"></script>
 </head>
 
 <body>
+<div class="container">
+<%- include('../views/partials/header.ejs'); %>
 <main>
-    <header>
-        <%- include('../views/partials/header.ejs'); %>
-    </header>
     <article>
         <div>
-            <div id="container">
+            <div>
                 <div id="status1"></div>
                 <div id="status2"></div>
             </div>
         </div>
     </article>
 </main>
-
+</div>
 </body>
 <footer id="foot">
     <%- include('../views/partials/footer.ejs'); %>
 </footer>
 
 </html>
+

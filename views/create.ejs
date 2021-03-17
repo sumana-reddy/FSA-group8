@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <%- include('../views/partials/head.ejs'); %>
+    <script type="module" src="/javascripts/create.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+<%- include('../views/partials/header.ejs'); %>
+<br><br>
+
+<div class="card">
+    <div class="card-header">
+      Add Location
+    </div>
+    <div class="card-body">
+      <form action="/list" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Location Name" autocomplete="off">
+        </div>
+
+        <div class="row">
+          <div class="col-sm-3">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control"  id="demo" name="email">
+                  <div class="input-group-append">
+                    <span class="input-group-text">Q1: Latitude</span>
+                  </div>
+                </div>
+
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control"  id="demo" name="email">
+                    <div class="input-group-append">
+                      <span class="input-group-text">Q2: Latitude</span>
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control"  id="demo" name="email">
+                    <div class="input-group-append">
+                      <span class="input-group-text">Q3: Latitude</span>
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control"  id="demo" name="email">
+                    <div class="input-group-append">
+                      <span class="input-group-text">Q4: Latitude</span>
+                    </div>
+                </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control"  id="demo" name="email">
+                <div class="input-group-append">
+                  <span class="input-group-text">Q1: Longitude</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control"  id="demo" name="email">
+                  <div class="input-group-append">
+                    <span class="input-group-text">Q2: Longitude</span>
+                  </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control"  id="demo" name="email">
+                  <div class="input-group-append">
+                    <span class="input-group-text">Q3: Longitude</span>
+                  </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control"  id="demo" name="email">
+                  <div class="input-group-append">
+                    <span class="input-group-text">Q4: Longitude</span>
+                  </div>
+              </div>
+        </div>
+        </div>
+
+
+
+
+
+        <br>
+        <div class="form-group">
+          <input type="submit" class="btn btn-info" value="Create" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+
+
+</body>
+<footer id="foot">
+    <%- include('../views/partials/footer.ejs'); %>
+</footer>
+
+</html>

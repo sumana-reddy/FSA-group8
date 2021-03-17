@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <%- include('../views/partials/head.ejs'); %>
+    <script type="module" src="/javascripts/list.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+<%- include('../views/partials/header.ejs'); %>
+<br><br>
+  <div><span>Add Location: </span><a type="button" href="/list/create" class="btn btn-success"><i class="fas fa-plus"></i></a></div>
+  <br>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <div class="list-group" id="myList">
+
+  </div>
+</div>
+
+
+</div>
+
+
+</body>
+<footer id="foot">
+    <%- include('../views/partials/footer.ejs'); %>
+</footer>
+
+</html>
