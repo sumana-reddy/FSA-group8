@@ -1,4 +1,4 @@
-import locationsArray from '../locations.js';
+import locationsArray from './locations.js';
 import {isInsideQuad} from "./location-quad.js";
 
 let colorElement1 = document.getElementById("status1");
@@ -17,7 +17,7 @@ colorElement2.addEventListener('touch', onClickSquareBox2);
 
 
 async function onClickSquareBox1() {
-    location = locationsArray[0];
+    location = locationsArray[1];
     let confirmation = "Treasure ready: " + location.name;
     document.getElementById("status1").innerHTML = confirmation;
     let utterance = new SpeechSynthesisUtterance(confirmation);
