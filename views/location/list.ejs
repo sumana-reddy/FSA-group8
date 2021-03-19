@@ -1,6 +1,37 @@
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">First item</li>
-    <li class="list-group-item">Second item</li>
-    <li class="list-group-item">Third item</li>
-    <li class="list-group-item">Fourth item</li>
-</ul>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <%- include('../partials/head.ejs'); %>
+    <script type="module" src="/javascripts/list.js"></script>
+</head>
+
+<body>
+
+<%- include('../partials/header.ejs'); %>
+<div class="container">
+    <div>
+        <span>Add Location: </span>
+        <a type="button" href="/list/create" class="btn btn-success">
+            <i class="fas fa-plus"></i>
+        </a>
+    </div>
+    <br>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <div class="list-group" id="myList">
+
+    </div>
+</div>
+
+
+</div>
+
+
+</body>
+<footer id="foot">
+    <%- include('../partials/footer.ejs'); %>
+</footer>
+
+</html>
