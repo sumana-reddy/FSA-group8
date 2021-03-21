@@ -6,15 +6,16 @@
 a {
   color: #00B7FF;
 } */
+html, body {
+  height: 100%;
+}
 
 body {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-#content {
-  max-height: calc(100% - 120px);
-  overflow-y: scroll;
-  padding: 0px 10% !important;
-  margin-top: 60px !important;
+.container {
+  flex: 1 0 auto;
 }
 
 article {
@@ -24,7 +25,6 @@ article {
   margin-left: -220px;
   margin-top: -120px;
 }
-
 
 #status1 {
   height: 200px;
@@ -45,10 +45,8 @@ article {
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  flex-shrink: 0;
+  /*width: 100%;*/
   background-color: #ccc;
   padding: 15px;
   color: white;
