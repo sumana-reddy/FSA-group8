@@ -22,11 +22,11 @@ exports.getLocationCreate = async (req, res, next) => {
 
     res.render('location/create', {
         pageTitle: 'Location create',
-        path: '/list/create'
+        path: '/create'
     });
 };
 
-exports.postLocationCreate =  async (req, res, next) => {
+exports.postLocationCreate = async (req, res, next) => {
 
     let latitude = req.body.coordinate1[0] + '#' + req.body.coordinate2[0] + '#' + req.body.coordinate3[0] + '#' + req.body.coordinate4[0];
     let longitude = req.body.coordinate1[1] + '#' + req.body.coordinate2[1] + '#' + req.body.coordinate3[1] + '#' + req.body.coordinate4[1];
@@ -43,14 +43,64 @@ exports.postLocationCreate =  async (req, res, next) => {
     res.redirect('/list');
 }
 
-exports.getLocationEdit = async (req, res, next) => {
+exports.getLocationEdit = (req, res, next) => {
 
+    let locationId = req.params.locationId;
 
+    db.Location.findByPk(locationId).then(location => {
+
+        location.locationId = locationId;
+
+        res.render('location/edit', {
+            pageTitle: 'Location edit',
+            path: '/edit',
+            location: location
+        });
+
+    }).catch(err => {
+        console.log(err);
+    });
 
 };
 
 exports.postLocationEdit = async (req, res, next) => {
 
+    console.log("location: ", req.body);
 
+    let updatedName = req.body.name;
+    let updatedlatitude = req.body.coordinate1[0] + '#' + req.body.coordinate2[0] + '#' + req.body.coordinate3[0] + '#' + req.body.coordinate4[0];
+    let updatedlongitude = req.body.coordinate1[1] + '#' + req.body.coordinate2[1] + '#' + req.body.coordinate3[1] + '#' + req.body.coordinate4[1];
 
+    db.Location.findByPk(req.body.locationId).then(location => {
+
+        location.name = updatedName;
+        location.latitude = updatedlatitude;
+        location.longitude = updatedlongitude;
+        location.createdAt = new Date().toDateString();
+        location.updatedAt = new Date().toDateString();
+        return location.save();
+
+    }).then(result => {
+        console.log('UPDATED PRODUCT!');
+        res.redirect('/list');
+    }).catch(err => {
+        console.log(err);
+    });
 };
+
+exports.deleteLocation = async (req, res, next) => {
+
+    let locationId = req.params.locationId;
+
+    db.Location.findByPk(locationId).then(location => {
+        console.log("location: ", location)
+        return location.destroy();
+    }).then(result => {
+        console.log('DELETED PRODUCT!');
+        res.redirect('/list');
+    }).catch(err => {
+        console.log(err);
+    });
+
+
+}

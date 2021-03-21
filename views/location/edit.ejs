@@ -1,0 +1,114 @@
+<!--
+ * @create.ejs - create new
+ *
+ * To create a new location by adding new coordinates.
+ * @author Sumana Reddy Reddybathula "S538360@nwmissouri.edu"
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <%- include('../partials/head.ejs'); %>
+</head>
+<body>
+<%- include('../partials/header.ejs'); %>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Add Location
+        </div>
+        <div class="card-body">
+            <form action="/list/edit" method="post">
+
+                <input type="hidden" name="locationId" value="<%= location.locationId %>">
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" name="name" placeholder="Location Name" value="<%= location.name %>" autocomplete="off" required>
+                </div>
+
+                <% let latitude = location.latitude.split('#') %>
+                <% let longitude = location.longitude.split('#') %>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control"  name="coordinate1" autocomplete="off" value="<%= latitude[0] %>" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q1: Latitude</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control"  name="coordinate2" autocomplete="off" value="<%= latitude[1] %>" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q2: Latitude</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control"  name="coordinate3" autocomplete="off" value="<%= latitude[2] %>" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q3: Latitude</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control"  name="coordinate4" autocomplete="off" value="<%= latitude[3] %>" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q4: Latitude</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control"  name="coordinate1" autocomplete="off" value="<%= longitude[0] %>" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q1: Longitude</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control"  name="coordinate2" autocomplete="off" value="<%= longitude[1] %>" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q2: Longitude</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control"  name="coordinate3" autocomplete="off" value="<%= longitude[2] %>" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q3: Longitude</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control"  name="coordinate4" autocomplete="off" value="<%= longitude[3] %>" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q4: Longitude</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-info" value="Edit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+<footer id="foot">
+    <%- include('../partials/footer.ejs'); %>
+</footer>
+
+</html>
+
+

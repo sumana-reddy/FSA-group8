@@ -16,9 +16,12 @@ router.get('/list/create', locationController.getLocationCreate);
 router.post('/list/create', locationController.postLocationCreate);
 
 /* Get Update location to DB. */
-router.get('/list/edit', locationController.getLocationEdit);
+router.get('/list/edit/:locationId', locationController.getLocationEdit);
 
 /* Post Update location to DB. */
 router.post('/list/edit', locationController.postLocationEdit);
+
+/* Post Update location to DB. */
+router.get('/list/delete/:locationId', locationController.deleteLocation);
 
 module.exports = router;

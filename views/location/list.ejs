@@ -28,8 +28,8 @@
                     <div class="d-flex w-100 justify-content-between"><h5 class="mb-1"><a
                                     href="#"><%= location.dataValues.name %></a></h5>
                         <div class="mb-1 btn-group">
-                            <button type="button" class="btn btn-primary edit" locationID=<%= location.dataValues.id %> ><i class="fas fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger delete" locationID=<%= location.dataValues.id %> ><i class="fas fa-trash"></i></button>
+                            <a type="button" class="btn btn-primary edit" href="/list/edit/<%= location.dataValues.id %>" ><i class="fas fa-edit"></i></a>
+                            <a type="button" class="btn btn-danger delete" data-href="/list/delete/<%= location.dataValues.id %>" data-toggle="modal" data-target="#confirm-delete" ><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
                 </div>
@@ -38,6 +38,23 @@
     <% } else { %>
         <h1>No Locations Found!</h1>
     <% } %>
+
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Delete Location
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete your location?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a type="submit" class="btn btn-danger btn-ok">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
