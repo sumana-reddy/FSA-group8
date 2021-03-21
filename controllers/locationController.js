@@ -35,7 +35,9 @@ exports.postLocationCreate =  async (req, res, next) => {
         name: req.body.name,
         type: 'quad',
         latitude: latitude,
-        longitude: longitude
+        longitude: longitude,
+        createdAt: new Date().toDateString(),
+        updatedAt: new Date().toDateString()
     });
 
     res.redirect('/list');
