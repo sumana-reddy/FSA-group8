@@ -10,7 +10,7 @@
 <body>
 
 <%- include('../partials/header.ejs'); %>
-<div class="container">
+<div class="container mt-3">
     <div>
         <span>Add Location: </span>
         <a type="button" href="/list/create" class="btn btn-success">
@@ -25,11 +25,27 @@
         <div class="list-group" id="myList">
             <% for (let location of locationList) { %>
                 <div class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between"><h5 class="mb-1"><a
-                                    href="#"><%= location.dataValues.name %></a></h5>
-                        <div class="mb-1 btn-group">
-                            <a type="button" class="btn btn-primary edit" href="/list/edit/<%= location.dataValues.id %>" ><i class="fas fa-edit"></i></a>
-                            <a type="button" class="btn btn-danger delete" data-href="/list/delete/<%= location.dataValues.id %>" data-toggle="modal" data-target="#confirm-delete" ><i class="fas fa-trash"></i></a>
+                    <div class="d-flex w-100 justify-content-between">
+                        <div class="p-2">
+                            <h5 href="#"><%= location.dataValues.name %><span locID="<%= location.dataValues.id %>"
+                                                                              class="badge badge-info"
+                                                                              style="display: none"><i
+                                            class="fas fa-check"></i></span></h5>
+                            <p><i>[<%= location.dataValues.latitude.split('#')[0] %>
+                                    , <%= location.dataValues.longitude.split('#')[0] %>]</i></p>
+                            <p><i>[<%= location.dataValues.latitude.split('#')[1] %>
+                                    , <%= location.dataValues.longitude.split('#')[1] %>]</i></p>
+                            <p><i>[<%= location.dataValues.latitude.split('#')[2] %>
+                                    , <%= location.dataValues.longitude.split('#')[2] %>]</i></p>
+                            <p><i>[<%= location.dataValues.latitude.split('#')[3] %>
+                                    , <%= location.dataValues.longitude.split('#')[3] %>]</i></p>
+                        </div>
+                        <div class="p-2 flex-shrink-1 btn-group">
+                            <a type="button" class="btn btn-primary edit"
+                               href="/list/edit/<%= location.dataValues.id %>"><i class="fas fa-edit"></i></a>
+                            <a type="button" class="btn btn-danger delete"
+                               data-href="/list/delete/<%= location.dataValues.id %>" data-toggle="modal"
+                               data-target="#confirm-delete"><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +55,8 @@
         <h1>No Locations Found!</h1>
     <% } %>
 
-    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -55,10 +72,11 @@
             </div>
         </div>
     </div>
+
 </div>
 
 </body>
 
-    <%- include('../partials/footer.ejs'); %>
+<%- include('../partials/footer.ejs'); %>
 
 </html>

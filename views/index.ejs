@@ -11,20 +11,20 @@
 <%- include('../views/partials/header.ejs'); %>
 <div class="container">
     <h1 class="text-center">Full Stack app-8</h1>
-<main>
-    <article>
-        <div>
-            <div>
-                <div id="status1"></div>
-                <div id="status2"></div>
-            </div>
-        </div>
-    </article>
-</main>
+
+    <div class="d-flex justify-content-center mb-3">
+        <div id="status1" class="p-2"></div>
+        <div id="status2" class="p-2"></div>
+    </div>
+
+    <div class="d-flex justify-content-center mb-3">
+        <button type="button" id="reset" class="btn btn-success p-2">Reset</button>
+    </div>
 </div>
+
 </body>
 
-    <%- include('../views/partials/footer.ejs'); %>
+<%- include('../views/partials/footer.ejs'); %>
 
 </html>
 

@@ -9,6 +9,9 @@ router.get('/', locationController.getIndex);
 /* GET location list page. */
 router.get('/list', locationController.getLocationList);
 
+/* GET location list page. */
+router.get('/list/index', locationController.getLocationListForIndexPage);
+
 /* GET location create page. */
 router.get('/list/create', locationController.getLocationCreate);
 
