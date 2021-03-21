@@ -1,4 +1,3 @@
-import locationsArray from './locations.js';
 
 $(document).ready(function () {
     $("#myInput").on("keyup", function () {
@@ -8,12 +7,13 @@ $(document).ready(function () {
         });
     });
 
-    console.log(locationsArray);
-    let i;
-    for (i = 0; i < locationsArray.length; i++) {
-        $("#myList").append("<div class=\"list-group-item list-group-item-action flex-column align-items-start\">" +
-            "<div class=\"d-flex w-100 justify-content-between\"><h5 class=\"mb-1\"><a href=\"#\">" + locationsArray[i].name + "</a></h5>" +
-            "<div class=\"mb-1 btn-group\"> <button type=\"button\" class=\"btn btn-primary\"><i class=\"fas fa-edit\"></i></button> " +
-            "<button type=\"button\" class=\"btn btn-danger\"><i class=\"fas fa-trash\"></i></button></div></div></div>");
-    }
+    $("button.btn.btn-primary.edit").click(function () {
+        let locationID = $(this).attr("locationID");
+        $.get( "/list/update", { locationID: locationID } );
+    })
+
+    $("button.btn.btn-danger.delete").click(function () {
+        let locationID = $(this).attr("locationID");
+        $.post( "/list/delete", { locationID: locationID } );
+    })
 });

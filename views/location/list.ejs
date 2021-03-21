@@ -20,14 +20,25 @@
     <br>
     <input class="form-control" id="myInput" type="text" placeholder="Search..">
     <br>
-    <div class="list-group" id="myList">
 
-    </div>
+    <% if (locationList.length > 0) { %>
+        <div class="list-group" id="myList">
+            <% for (let location of locationList) { %>
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between"><h5 class="mb-1"><a
+                                    href="#"><%= location.dataValues.name %></a></h5>
+                        <div class="mb-1 btn-group">
+                            <button type="button" class="btn btn-primary edit" locationID=<%= location.dataValues.id %> ><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger delete" locationID=<%= location.dataValues.id %> ><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    <% } else { %>
+        <h1>No Locations Found!</h1>
+    <% } %>
 </div>
-
-
-</div>
-
 
 </body>
 <footer id="foot">
