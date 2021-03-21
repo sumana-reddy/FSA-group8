@@ -90,8 +90,8 @@ async function onClickSquareBox1() {
 
             for (let i = 0; i < 4; i++) {
                 myArrayElement.coordinates.push({
-                    latitude: latArray[i],
-                    longitude: lonArray[i]
+                    latitude: parseFloat(latArray[i]),
+                    longitude: parseFloat(lonArray[i])
                 });
             }
 
