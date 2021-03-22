@@ -27,8 +27,16 @@ module.exports = {
       longitude: '-78.85291#-78.85373#-78.85548#-78.85879',
       createdAt: new Date().toDateString(),
       updatedAt: new Date().toDateString()
-    }, {
+    },{ 
       id: 3,
+      name: 'Colden Hall',
+      type: 'quad',
+      latitude: '40.35117#40.35104#40.35109#40.35064',
+      longitude: '-94.88299#-94.88310#-94.88215#-94.88245',
+      createdAt: new Date().toDateString(),
+      updatedAt: new Date().toDateString()
+    }, {
+      id: 4,
       name: 'B.D Owens Library',
       type: 'quad',
       latitude: '40.35376#40.35375#40.35338#40.35339',
