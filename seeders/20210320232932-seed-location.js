@@ -15,24 +15,24 @@ module.exports = {
       id: 1,
       name: '1213 Apartments',
       type: 'quad',
-      latitude: '40.360857#40.360849#40.360495#40.360521',
-      longitude: '-94.888152#-94.887489#-94.887500#-94.888210',
+      latitude: '40.36085#40.36084#40.36049#40.36052',
+      longitude: '-94.88815#-94.88748#-94.88750#-94.88821',
       createdAt: new Date().toDateString(),
       updatedAt: new Date().toDateString()
     }, {
       id: 2,
       name: '5860 McCrimmon Parkway',
       type: 'quad',
-      latitude: '35.8416#35.8429#35.8280#35.8216',
-      longitude: '-78.852915#-78.853732#-78.855489#-78.858790',
+      latitude: '35.84162#35.84290#35.82800#35.82161',
+      longitude: '-78.85291#-78.85373#-78.85548#-78.85879',
       createdAt: new Date().toDateString(),
       updatedAt: new Date().toDateString()
     }, {
       id: 3,
       name: 'B.D Owens Library',
       type: 'quad',
-      latitude: '35.8416#35.8429#35.8280#35.8216',
-      longitude: '-78.852915#-78.853732#-78.855489#-78.858790',
+      latitude: '40.35376#40.35375#40.35338#40.35339',
+      longitude: '-94.88655#-94.88554#-94.88633#-94.88569',
       createdAt: new Date().toDateString(),
       updatedAt: new Date().toDateString()
     }], {});
