@@ -35,8 +35,16 @@ module.exports = {
       longitude: '-94.88299#-94.88310#-94.88215#-94.88245',
       createdAt: new Date().toDateString(),
       updatedAt: new Date().toDateString()
-    }, {
+    }, { 
       id: 4,
+      name: 'Horizons west',
+      type: 'quad',
+      latitude: '40.35616#40.35615#40.35585#40.35584',
+      longitude: '-94.88134#-94.88310#-94.88256#-94.88136',
+      createdAt: new Date().toDateString(),
+      updatedAt: new Date().toDateString()
+    },{
+      id: 5,
       name: 'B.D Owens Library',
       type: 'quad',
       latitude: '40.35376#40.35375#40.35338#40.35339',
