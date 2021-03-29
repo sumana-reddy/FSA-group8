@@ -12,9 +12,6 @@ A full stack app
 ## Link to heroku
 https://fsa-group8.herokuapp.com/
 
-## Link to hosted app
-https://sumana-reddy.github.io/FSA-group8/
-
 
 ## FAQ's
 ### what location shape are you using? 
