@@ -43,12 +43,15 @@
                         <div class="p-2 flex-shrink-1 btn-group">
                             <a type="button" class="btn btn-primary edit"
                                href="/list/edit/<%= location.dataValues.id %>">
-                              <img src="https://img.icons8.com/dusk/32/000000/edit--v2.png"/>
+                              <img src="https://img.icons8.com/dusk/30/000000/edit--v2.png"/>
                                <!-- <i class="fas fa-edit"></i> -->
                                </a>
                             <a type="button" class="btn btn-danger delete"
                                data-href="/list/delete/<%= location.dataValues.id %>" data-toggle="modal"
-                               data-target="#confirm-delete"><i class="fas fa-trash"></i></a>
+                               data-target="#confirm-delete">
+                               <!--<i class="fas fa-trash"></i>-->
+                               <img src="https://img.icons8.com/dusk/30/000000/delete-forever.png"/>
+                               </a>
                         </div>
                     </div>
                 </div>
