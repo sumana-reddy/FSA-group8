@@ -14,7 +14,19 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Location.init({
-    name: {
+    
+     name: {
+       type: String, 
+       lowercase: true, 
+       required: [true, "can't be blank"], 
+       match: [/^[a-zA-Z0-9]+$/, 'is invalid'], 
+       index: true
+     },
+     type: DataTypes.STRING,
+    latitude: DataTypes.STRING,
+     longitude: DataTypes.STRING
+     
+   /** name: {
       DataTypes.STRING,
     },
     type: {
@@ -27,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       DataTypes.STRING
     },
     
-    /** name: {
+     name: {
         type: String,
         minlength: 2,
         maxlength: 100,
