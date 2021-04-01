@@ -19,9 +19,11 @@ module.exports = (sequelize, DataTypes) => {
        type: String, 
        lowercase: true, 
        required: [true, "can't be blank"], 
-       match: [/^[a-zA-Z0-9]+$/, 'is invalid'], 
+       match: [/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/], 
+       validate: () => Promise.reject(new Error('Oops!'))
        index: true
      },
+    // ^[a-zA-Z0-9]+$
      type: DataTypes.STRING,
     latitude: DataTypes.STRING,
      longitude: DataTypes.STRING
