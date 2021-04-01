@@ -19,16 +19,46 @@ module.exports = (sequelize, DataTypes) => {
        type: String, 
        lowercase: true, 
        required: [true, "can't be blank"], 
-       match: [/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/], 
-       validate: () => Promise.reject(new Error('Oops!'))
+       match: [/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/, 'is invalid'], 
        index: true
-     },
-    // ^[a-zA-Z0-9]+$
-     type: DataTypes.STRING,
-    latitude: DataTypes.STRING,
-     longitude: DataTypes.STRING
-     
+     },    
+    
+    latitude: {
+      type: DataTypes.DECIMAL(10, 8),
+      allowNull: false,
+      validate: {
+        min: {
+          args: -90,
+          msg: 'Latitude must be -90 degrees or more.',
+        },
+        max: {
+          args: 90,
+          msg: 'Latitude must be 90 degrees or less.'
+        },
+      },
+    },
+    
+     longitude: {
+       type: DataTypes.DECIMAL(11, 8),
+      allowNull: false,
+      unique: true,
+      validate: {
+        min: {
+          args: -180,
+          msg: 'Latitude must be -180 degrees or more.',
+        },
+        max: {
+          args: 180,
+          msg: 'Latitude must be 180 degrees or less.',
+        },
+
+      }
+    },
+    
+      type: DataTypes.STRING
+    
    /** name: {
+   // ^[a-zA-Z0-9]+$
       DataTypes.STRING,
     },
     type: {
