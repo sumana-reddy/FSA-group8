@@ -16,12 +16,26 @@ module.exports = (sequelize, DataTypes) => {
   Location.init({
     
      name: {
-       type: String, 
-       lowercase: true, 
-       required: [true, "can't be blank"], 
-       match: [/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/, 'is invalid'], 
-       index: true
-     },    
+       type: DataTypes.STRING(30),
+      unique: true,
+      required: true,
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^([a-zA-Z]+\s)*[a-zA-Z]+$/i  ,
+          msg:
+            'Name accepts alphabets, neither numbers nor special characters.',
+        },
+        max: {
+          args: [30],
+          msg: 'Name is too long.',
+        },
+        min: {
+          args: [5],
+          msg: 'Name should have minimum 5 characters.',
+        },
+      },
+    },
     
     latitude: {
       type: DataTypes.DECIMAL(10, 8),
