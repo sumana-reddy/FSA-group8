@@ -14,10 +14,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Location.init({
-    name: DataTypes.STRING,
-    type: DataTypes.STRING,
-    latitude: DataTypes.STRING,
-    longitude: DataTypes.STRING
+    name: {
+      DataTypes.STRING,
+    },
+    type: {
+      DataTypes.STRING,
+    },
+    latitude: {
+      DataTypes.STRING,
+    },
+    longitude: {
+      DataTypes.STRING
+    },
     
     /** name: {
         type: String,
