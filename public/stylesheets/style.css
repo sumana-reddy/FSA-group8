@@ -20,14 +20,14 @@ body {
 #status1 {
   height: 200px;
   width: 200px;
-  background: #424B54;
+  background: #F5DDDD;
   border: 1px solid #ccc;
 }
 
 #status2 {
   height: 200px;
   width: 200px;
-  background: #EBCFB2;
+  background: #AF5D63;
   border: 1px solid #ccc;
 }
 
@@ -38,7 +38,7 @@ body {
 .footer {
   flex-shrink: 0;
   /*width: 100%;*/
-  background-color: #ccc;
+  background-color: #212529;
   padding: 15px;
   color: white;
   text-align: center;
