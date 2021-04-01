@@ -14,12 +14,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Location.init({
-   // name: DataTypes.STRING,
-   // type: DataTypes.STRING,
-   // latitude: DataTypes.STRING,
-   // longitude: DataTypes.STRING
+    name: DataTypes.STRING,
+    type: DataTypes.STRING,
+    latitude: DataTypes.STRING,
+    longitude: DataTypes.STRING
     
-     name: {
+    /** name: {
         type: String,
         minlength: 2,
         maxlength: 100,
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         type: float,
         required: true,   
     }   
-    
+    **/
     
     
   }, {
