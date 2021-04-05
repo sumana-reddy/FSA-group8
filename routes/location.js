@@ -13,7 +13,7 @@ router.get('/list', locationController.getLocationList);
 router.get('/list/index', locationController.getLocationListForIndexPage);
 
 /* GET location map page. */
-router.get('/list/map', locationController.getMap);
+router.get('/map', locationController.getMap);
 
 /* GET location create page. */
 router.get('/list/create', locationController.getLocationCreate);
