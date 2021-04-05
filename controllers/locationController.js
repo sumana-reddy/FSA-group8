@@ -9,9 +9,9 @@ exports.getIndex = async (req, res, next) => {
 
 exports.getMap = async (req, res, next) => {
 
-    res.render('locationMap/google_maps', {
+    res.render('location/map', {
         pageTitle: 'Google Maps',
-        path: '/maps'
+        path: '/map'
     });
 };
 exports.getLocationListForIndexPage = async (req, res, next) => {
