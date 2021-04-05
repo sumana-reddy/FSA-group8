@@ -27,7 +27,7 @@
             Add Location
         </div>
         <div class="card-body">
-            <form action="/list/edit" method="post">
+            <form action="/list/edit" method="post" id="editForm">
 
                 <input type="hidden" name="locationId" value="<%= location.locationId %>">
 
@@ -104,13 +104,15 @@
                     <input type="submit" class="btn btn-info" value="Edit" />
                     <input type="reset" class="btn btn-info" value="Reset" />
                 </div>
-                <br>
-                <div class="form-group">
-
-                </div>
             </form>
         </div>
     </div>
+
+    <script>
+        $("body > div > div > div.card-body > form > div:nth-child(5) > input:nth-child(2)").click(function() {
+            document.getElementById("editForm").reset();
+        });
+    </script>
 
 
 </div>
