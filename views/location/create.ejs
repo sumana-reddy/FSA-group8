@@ -5,101 +5,143 @@
  * @author Sumana Reddy Reddybathula "S538360@nwmissouri.edu"
 -->
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 
- <html>
+<html>
 
- <head>
-     <%- include('../partials/head.ejs'); %>
- </head>
- <body>
- <%- include('../partials/header.ejs'); %>
- <div class="container">
-     <div class="card">
-         <div class="card-header">
-             Add Location
-         </div>
-         <div class="card-body">
-             <form action="/list/create" method="post">
-                 <div class="form-group">
-                     <label for="name">Name:</label>
-                     <input type="text" class="form-control" name="name" placeholder="Location Name" autocomplete="off" required>
-                 </div>
+<head>
+    <%- include('../partials/head.ejs'); %>
+</head>
+<body>
+<%- include('../partials/header.ejs'); %>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Add Location
+        </div>
+        <div class="card-body">
+            <form action="/list/create" method="post" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="name" placeholder="Location Name"
+                               autocomplete="off" maxlength="100" minlength="5"
+                               pattern="^([a-zA-Z]+\s)*[a-zA-Z]+$" required>
+                        <div class="invalid-feedback">Name accepts minimum 5 characters, maximum 100 characters. Name accepts alphabets, neither numbers nor special characters.</div>
+                    </div>
+                </div>
 
-                 <div class="row">
-                     <div class="col-sm-3">
-                         <div class="input-group mb-3">
-                             <input type="text" class="form-control"  name="coordinate1" autocomplete="off"  required>
-                             <div class="input-group-append">
-                                 <span class="input-group-text">Q1: Latitude</span>
-                             </div>
-                         </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="coordinate1" autocomplete="off"
+                                   pattern="-?(90|[1-8][0-9]|[1-9])(\.\d{5})" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q1: Latitude</span>
+                            </div>
+                            <div class="invalid-feedback">Latitude should be in range of -90 to 90 and contains at least 5 places after decimal</div>
+                        </div>
 
-                         <div class="input-group mb-3">
-                             <input type="text" class="form-control"  name="coordinate2" autocomplete="off"  required>
-                             <div class="input-group-append">
-                                 <span class="input-group-text">Q2: Latitude</span>
-                             </div>
-                         </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="coordinate2" autocomplete="off"
+                                   pattern="-?(90|[1-8][0-9]|[1-9])(\.\d{5})" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q2: Latitude</span>
+                            </div>
+                            <div class="invalid-feedback">Latitude should be in range of -90 to 90 and contains at least 5 places after decimal</div>
+                        </div>
 
-                         <div class="input-group mb-3">
-                             <input type="text" class="form-control"  name="coordinate3" autocomplete="off"  required>
-                             <div class="input-group-append">
-                                 <span class="input-group-text">Q3: Latitude</span>
-                             </div>
-                         </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="coordinate3" autocomplete="off"
+                                   pattern="-?(90|[1-8][0-9]|[1-9])(\.\d{5})" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q3: Latitude</span>
+                            </div>
+                            <div class="invalid-feedback">Latitude should be in range of -90 to 90 and contains at least 5 places after decimal</div>
+                        </div>
 
-                         <div class="input-group mb-3">
-                             <input type="text" class="form-control"  name="coordinate4" autocomplete="off"  required>
-                             <div class="input-group-append">
-                                 <span class="input-group-text">Q4: Latitude</span>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="col-sm-3">
-                         <div class="input-group mb-3">
-                             <input type="text" class="form-control"  name="coordinate1" autocomplete="off"  required>
-                             <div class="input-group-append">
-                                 <span class="input-group-text">Q1: Longitude</span>
-                             </div>
-                         </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="coordinate4" autocomplete="off"
+                                   pattern="-?(90|[1-8][0-9]|[1-9])(\.\d{5})" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q4: Latitude</span>
+                            </div>
+                            <div class="invalid-feedback">Latitude should be in range of -90 to 90 and contains at least 5 places after decimal</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="coordinate1" autocomplete="off"
+                                   pattern="-?(180|[1][0-7][0-9]|[1-9][0-9]|[1-9])(\.\d{5})" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q1: Longitude</span>
+                            </div>
+                            <div class="invalid-feedback">Longitude should be in range of -180 to 180 and contains at least 5 places after decimal</div>
+                        </div>
 
-                         <div class="input-group mb-3">
-                             <input type="text" class="form-control"  name="coordinate2" autocomplete="off"  required>
-                             <div class="input-group-append">
-                                 <span class="input-group-text">Q2: Longitude</span>
-                             </div>
-                         </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="coordinate2" autocomplete="off"
+                                   pattern="-?(180|[1][0-7][0-9]|[1-9][0-9]|[1-9])(\.\d{5})" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q2: Longitude</span>
+                            </div>
+                            <div class="invalid-feedback">Longitude should be in range of -180 to 180 and contains at least 5 places after decimal</div>
+                        </div>
 
-                         <div class="input-group mb-3">
-                             <input type="text" class="form-control"  name="coordinate3" autocomplete="off"  required>
-                             <div class="input-group-append">
-                                 <span class="input-group-text">Q3: Longitude</span>
-                             </div>
-                         </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="coordinate3" autocomplete="off"
+                                   pattern="-?(180|[1][0-7][0-9]|[1-9][0-9]|[1-9])(\.\d{5})" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q3: Longitude</span>
+                            </div>
+                            <div class="invalid-feedback">Longitude should be in range of -180 to 180 and contains at least 5 places after decimal</div>
+                        </div>
 
-                         <div class="input-group mb-3">
-                             <input type="text" class="form-control"  name="coordinate4" autocomplete="off"  required>
-                             <div class="input-group-append">
-                                 <span class="input-group-text">Q4: Longitude</span>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <br>
-                 <div class="form-group">
-                     <input type="submit" class="btn btn-info" value="Create" />
-                 </div>
-             </form>
-         </div>
-     </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="coordinate4" autocomplete="off"
+                                   pattern="-?(180|[1][0-7][0-9]|[1-9][0-9]|[1-9])(\.\d{5})" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Q4: Longitude</span>
+                            </div>
+                            <div class="invalid-feedback">Longitude should be in range of -180 to 180 and contains at least 5 places after decimal</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-info" value="Create"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 
 
- </div>
+</div>
 
 
- </body>
-     <%- include('../partials/footer.ejs'); %>
- </html>
+</body>
+<%- include('../partials/footer.ejs'); %>
+</html>
 
  
