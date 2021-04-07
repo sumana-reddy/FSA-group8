@@ -12,9 +12,6 @@ router.get('/list', locationController.getLocationList);
 /* GET location list page. */
 router.get('/list/index', locationController.getLocationListForIndexPage);
 
-/* GET location map page. */
-router.get('/map', locationController.getMap);
-
 /* GET location create page. */
 router.get('/list/create', locationController.getLocationCreate);
 
