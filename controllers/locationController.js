@@ -7,13 +7,13 @@ exports.getIndex = async (req, res, next) => {
     });
 };
 
-exports.getMap = async (req, res, next) => {
+/* exports.getMap = async (req, res, next) => {
 
     res.render('location/map', {
         pageTitle: 'Google Maps',
         path: '/map'
     });
-};
+};*/
 exports.getLocationListForIndexPage = async (req, res, next) => {
     db.Location.findAll().then(list => {
         res.send(list);
