@@ -111,7 +111,8 @@ async function onClickSquareBox1() {
         let utterance = new SpeechSynthesisUtterance("All locations were completed. Please reset to play again!");
         speechSynthesis.speak(utterance);
     } else {
-        let confirmation = "Treasure ready: " + location.name;
+        // let confirmation = "Treasure ready: " + location.name;
+        let confirmation = "Treasure ready: ";
         document.getElementById("status1").innerHTML = confirmation;
         let utterance = new SpeechSynthesisUtterance(confirmation);
         speechSynthesis.speak(utterance);
@@ -119,6 +120,8 @@ async function onClickSquareBox1() {
 
 
 }
+
+
 
 async function onClickSquareBox2() {
     if (secondBoxFlag) {
@@ -141,7 +144,8 @@ async function onClickSquareBox2() {
                     }
                 })
             } else {
-                status += "You haven't reached the quest";
+                status += "You haven't reached the quest"
+                let distanceBetween = getDistanceFromCurrentLocation(location, device);
                 speak = "You haven't reached the quest";
             }
 
